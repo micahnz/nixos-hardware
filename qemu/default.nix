@@ -14,7 +14,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/33a76c54-a7b5-4318-b13a-c08bbe3681a0";
+    device = "/dev/disk/by-label/nixos-plasma6-24.05-x86_64";
     fsType = "ext4";
   };
 

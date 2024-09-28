@@ -5,7 +5,7 @@
 
   outputs = { self, ... }: {
     nixosModules = {
-      thinkpad-e16 = import ./thinkpad-e16;
+      qemu = import ./qemu;
     };
   };
 }

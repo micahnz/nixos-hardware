@@ -1,11 +1,16 @@
 {
   description = "nixos-hardware";
 
-  inputs = { };
+  inputs = {
+    default-configuration = {
+      url = "path:///etc/nixos/hardware-configuration.nix";
+      flake = false;
+    };
+  };
 
-  outputs = { self, ... }: {
+  outputs = { self, default-configuration, ... }: {
     nixosModules = {
-      default = import /etc/nixos/hardware-configuration.nix;
+      default = import default-configuration;
       qemu = import ./qemu;
     };
   };
